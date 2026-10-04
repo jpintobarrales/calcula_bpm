@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora BPM - Premiere / Vegas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de velocidad</h1>
+        <p class="description">
+            Ingresa el BPM de la canción original y el BPM del remix para saber qué valor poner en Adobe Premiere o Sony Vegas.
+        </p>
+
+        <div class="form">
+            <div class="programa-selector">
+                <label class="opcion">
+                    <input type="radio" name="programa" value="premiere" checked>
+                    <span>Adobe Premiere</span>
+                </label>
+                <label class="opcion">
+                    <input type="radio" name="programa" value="vegas">
+                    <span>Sony Vegas</span>
+                </label>
+            </div>
+
+            <label for="bpm-original">BPM original</label>
+            <input type="number" id="bpm-original" placeholder="Ej: 120" step="0.01" min="0">
+
+            <label for="bpm-remix">BPM del remix</label>
+            <input type="number" id="bpm-remix" placeholder="Ej: 128" step="0.01" min="0">
+
+            <button id="calcular">Calcular</button>
+        </div>
+
+        <div class="resultado" id="resultado"></div>
+
+        <div class="instrucciones" id="instrucciones"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
